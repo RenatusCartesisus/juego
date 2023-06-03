@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/d3ae0c1cce.js" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+<body>
+
+    <header role="banner">
+        <div class="main">
+          <nav class="navbar">
+            <div class="brand">
+               <!-- icono -->
+               <i class="fas fa-camera"></i>
+               <h3>Contactanos</h3>
+            </div>
+            <!-- barra menu -->
+            <div class="menu">
+                <ul id="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="contacto.html">Contactanos</a></li>
+                </ul>
+            </div>
+            <div class="toggle-menu" id="toggle-icon">
+               <i class="fas fa-bars"></i>
+            </div>
+          </nav>
+
+    <form action="enviar.php" method="post" class="formulario" id="form">
+       <h1 class="form_titulo">Tipo de contacto</h1>
+
+       <input type="text" class="form_input" onkeypress="return letras3(event);" onpaste="return false" name="nombre" id="nombre">
+       <label for="" class="form_label">Nombre(s)</label>
+
+       <input type="email" class="form_input" name="correo" >
+       <label for="" class="form_label">Correo</label>
+
+       <input  type="text" class="form_input" name="asunto">
+       <label for="" class="form_label">Asunto</label>
+
+       <input  maxlength="10" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="text" class="form_input" onpaste="return false" name="telefono" id="telefono" onkeypress="return numeros(event);">
+       <label for="" class="form_label">Teléfono</label>
+
+       <input type="text" class="form_input" name="mensaje">
+       <label for="" class="form_label">Mensaje</label>
+
+       <input type="submit" class="form_button" name="enviar">
+
+       
+
+    </form>
+    
+    <div>
+        <h3>Derechos Reservados <span id="year"></span></h3>
+    </div>
+      
+        <script src="assets/js/formulario.js"></script>
+        <script src='assets/js/script.js'></script>
+ 
+    
+</body>
+</html>
